@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "craftingfavorites",
+  "version": "${version}",
+
+  "name": "CraftingFavorites",
+  "description": "Favorite crafting recipes, pin them to the top of the recipe book, and find them faster.",
+  "authors": [],
+  "contact": {},
+
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": ["test.mod1.testmod1.client.Testmod1DataGenerator"],
+    "client": ["test.mod1.testmod1.client.Testmod1Client"],
+    "main": ["test.mod1.testmod1.Testmod1"]
+  },
+
+  "mixins": [
+    "testmod1.mixins.json"
+    ,{
+      "config": "testmod1.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
